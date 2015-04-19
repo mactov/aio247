@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="aio">
+  <head>
+      <link rel="stylesheet" type="text/css" href="css/mobile.css">
+  </head>
+  <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+      <script src="js/aio.js"></script>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter your name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+    <div id="welcome">
+        <hr />
+        <div id="btnIAmAvailable" class="button">Je suis disponible</div>
+        <div id="btnINeedHelp" class="button">J'ai besoin d'aide</div>
+    </div>
+    <div id="account">
+        <hr />
+        <div id="btnIHaveAnAccount" class="button">J'ai un compte</div>
+        <div id="btnCreateAccount" class="button">Cr&eacute;er un compte</div>
+    </div>
+    <div id="signIn">
+        <hr />
+        <table>
+            <tr><td>
+        <label>Email:</label></td>
+          <td><input type="text" ng-model="userMail" placeholder="Votre adresse mail" /></td>
+          </tr><tr>
+          <td><label>Mot de passe:</label></td>
+          <td><input type="password" ng-model="userPassword" placeholder="mot de passe"></td></tr>
+          </table>
+    </div>   
+
+  </body>
+</html>
