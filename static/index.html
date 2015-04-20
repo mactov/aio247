@@ -2,31 +2,23 @@
 <html ng-app="aio">
   <head>
       <link rel="stylesheet" type="text/css" href="css/mobile.css">
-	  
   </head>
-  <body>
-	  <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
+  <body ng-controller="aioController">
     <div>
       <h1 class="logo">AIO</h1>
 	  <h2 class="slogan">Votre sauveur est &agrave; deux clics de chez vous !</h2>
     </div>
-    <div id="welcome" ng-controller="welcomeController">
-		{{userRole}}
+    <div id="welcome" class="buttonsGroup" ng-show="showWelcome()">
         <hr />
-        <input type="button" id="btnIAmAvailable" class="button" ng-click="updateRoleToProvider()" value="Je suis disponible" /><br />
-        <input type="button" id="btnINeedHelp" class="button" ng-click="updateRoleToCustomer()" value="J'ai besoin d'aide" />
+        <div id="btnIAmAvailable" class="button" ng-click="updateRoleToProvider()">Je suis disponible</div>
+        <div id="btnINeedHelp" class="button" ng-click="updateRoleToCustomer()">J'ai besoin d'aide</div>
     </div>
-    <!--div id="account">
+    <div id="account" class="buttonsGroup" ng-show="showAccount()">
         <hr />
-        <div id="btnIHaveAnAccount" class="button">J'ai un compte</div>
-        <div id="btnCreateAccount" class="button">Cr&eacute;er un compte</div>
+        <div id="btnIHaveAnAccount" class="button" ng-click="updateUserHasAccount()">J'ai un compte</div>
+        <div id="btnCreateAccount" class="button" ng-click="updateUserHasNoAccount()">Cr&eacute;er un compte</div>
     </div>
-    <div id="signIn">
+    <!--div id="signIn">
         <hr />
         <table>
             <tr><td>

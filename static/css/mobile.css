@@ -34,7 +34,7 @@ body {
 	font-size: 4em;
 	padding-left: 42px;
 }
-#welcome {
+.buttonsGroup {
 	position: absolute;
 	bottom: 0;
 	left: 0;
