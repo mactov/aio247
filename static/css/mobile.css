@@ -1,16 +1,43 @@
+* {-moz-box-sizing: border-box; box-sizing: border-box;}
+
+html {
+  height: 100%;
+}
+
 body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url('../../images/boston.jpg');
-    background-size: 496px 604px;
+    background-size: 100%;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica;
-    width: 480px;
-    height: 600px;
+    color: #fff;
+    background-color: #2b3238;
+	position: relative;
+	display : table;
+    width: 100%;
 }
 .button {
     background-color: #f90;
-    color: #fff;
     margin: 10px;
     text-align: center;
     padding: 20px;
     border-radius: 5px;
+    font-size: 3em;
+}
+.logo {
+	font-size: 5em;
+	padding-left: 29px;
+}
+.slogan {
+	font-size: 4em;
+	padding-left: 42px;
+}
+#welcome {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display : table-row;
 }
